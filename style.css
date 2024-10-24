@@ -1,0 +1,41 @@
+body {
+    background-image: url(img/descarga.png); /*Imagen de fondo*/
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /*Fuente de letra */
+    color: aqua; /*Color de la letra*/
+    font-size: 50px; /*Tamaño de la letra*/
+    text-align: center;  /*Alineación del texto*/
+    font-weight: 200; /* Grosor de la letra */
+    text-shadow: 4px 4px 5px rgb(0, 0, 0); /*Sombra del texto */
+
+}
+
+.galeria {
+    display: flex; /*Estilo dinamico de las imagenes de galeria*/ 
+    flex-wrap: wrap; /*Permite que las imagenes no se desborden en caso de no tener más espacio*/
+    justify-content: center; /*Centrar las imagenes */ 
+    gap: 10px;  /*Espacio entre las imagenes*/
+    max-width: 100%; /*Establece el ancho maximo */
+    margin-top: 100px;  /*Espacio entre la parte superior de la pagina y las imagenes */
+}
+
+.galeria img {
+    width: 28%; /*Tamaño de  cada imagen*/ 
+    height: auto; /*Para mantener la proporcion de las imagenes*/
+    object-fit: cover; /*Logra ajustar la imagen para rellenar espacios o que no se deforme*/ 
+    border-radius: 5px; /*Bordes de las imagenes redondos*/
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra ligera de imagenes*/
+    transition: all 0.3s ease; /*Transición*/
+    box-shadow: 3px 4px 5px rgb(202, 255, 9); /*Sombra para dar colores a los lados de cada imagen*/
+}
+
+@media (max-width: 768px) {
+    .galeria img { /* Esto nos ayuda a ajustar los diferentes estilos para pantallas de 768px   */
+     width: 48%; /*Las imagenes ocupan un 48%*/
+    } /**/
+}
+
+@media (max-width: 480px) {
+    .galeria img { /*Esto nos ayuda a ajustar los diferentes estilos para pantallas de 480px*/
+        width: 95%; /*las imagenes ocupan un 95%*/
+    }
+}
